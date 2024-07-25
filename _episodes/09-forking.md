@@ -10,6 +10,7 @@ keypoints:
 - "First key point. Brief Answer to questions. (FIXME)"
 ---
 
+Make sure that the main is clean, everything is committed.
 
 ![GitFlow 1](../fig/27-forking-1.png)
 ![GitFlow 1](../fig/28-forking-2.png)

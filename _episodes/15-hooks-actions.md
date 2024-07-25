@@ -27,6 +27,8 @@ nano .git/hooks/pre-commit
 And add the following text to it:
 
 ~~~
+#!/usr/bin/env bash
+
 set -eo pipefail
 flake8 source_code
 echo "flake8 passed!"

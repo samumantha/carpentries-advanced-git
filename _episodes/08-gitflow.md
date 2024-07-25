@@ -59,6 +59,7 @@ Indeed, due to GitFlow’s complexity, it could slow down the development proces
 >
 > > ## Solution
 > > ~~~
+> > git fetch upstream
 > > git checkout -b myfeature upstream/develop
 > > ~~~
 > > {: .language-bash}

@@ -15,12 +15,11 @@ Even if you live well, one day you will have to merge a branch. Your branch may 
 
 There are 3 ways to merge:
 
+- non-fast-forward merged (recommended)
+
 - fast forward merged
 
-- non-fast-forward merged
-
 - three way
-
 
 Reminder: when starting work on a new feature, be careful where you branch from!
 
@@ -33,6 +32,17 @@ git checkout -b develop upstream/develop
 
 ![Merging 1](../fig/09-merging.png)
 
+## Non-fast-forwad Merge
+
+Merges branch by creating a merge commit. Prompts for merge commit message. Ideal for merging two branches.
+
+~~~
+git checkout main
+git merge --no-ff <branch> -m "Message"
+~~~
+{: .language-bash}
+
+The `--no-ff` flag causes the merge to always create a new commit object, even if the merge could be performed with a fast-forward. This avoids losing information about the historical existence of a feature branch and groups together all commits that together added the feature.
 
 ## Fast-forward Merger
 
@@ -47,17 +57,7 @@ git merge --ff-only <branch>
 
 Using the fast-forward merge it is impossible to see from the `git` history which of the commit objects together have implemented a feature. You would have to manually read all the log messages. Reverting a whole feature (i.e. a group of commits), is a true headache in the latter situation, whereas it is easily done if the --no-ff flag was used.
 
-## Non-fast-forwad Merge
-
-Merges branch by creating a merge commit. Prompts for merge commit message. Ideal for merging two branches.
-
-~~~
-git checkout main
-git merge --no-ff <branch>
-~~~
-{: .language-bash}
-
-The `--no-ff` flag causes the merge to always create a new commit object, even if the merge could be performed with a fast-forward. This avoids losing information about the historical existence of a feature branch and groups together all commits that together added the feature.
+For a good illustration of fast-forward merger (and other concepts), see this thread: https://stackoverflow.com/questions/9069061/what-effect-does-the-no-ff-flag-have-for-git-merge
 
 ### Three-way Merger
 

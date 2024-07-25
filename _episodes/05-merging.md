@@ -38,7 +38,7 @@ Merges branch by creating a merge commit. Prompts for merge commit message. Idea
 
 ~~~
 git checkout main
-git merge --no-ff <branch>
+git merge --no-ff <branch> -m "Message"
 ~~~
 {: .language-bash}
 
@@ -56,6 +56,8 @@ git merge --ff-only <branch>
 {: .language-bash}
 
 Using the fast-forward merge it is impossible to see from the `git` history which of the commit objects together have implemented a feature. You would have to manually read all the log messages. Reverting a whole feature (i.e. a group of commits), is a true headache in the latter situation, whereas it is easily done if the --no-ff flag was used.
+
+For a good illustration of fast-forward merger (and other concepts), see this thread: https://stackoverflow.com/questions/9069061/what-effect-does-the-no-ff-flag-have-for-git-merge
 
 ### Three-way Merger
 

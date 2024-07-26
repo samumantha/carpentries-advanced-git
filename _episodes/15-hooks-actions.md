@@ -30,9 +30,24 @@ And add the following text to it:
 #!/usr/bin/env bash
 
 set -eo pipefail
-flake8 source_code
+flake8 hello.py
 echo "flake8 passed!"
 ~~~
+
+Now let's make `hello.py`:
+
+~~~
+touch hello.py
+nano hello.py
+~~~
+
+And add some text to it:
+
+~~~
+print('Hello world!'')
+~~~
+
+The typo is on purpose. Add and commit it to the repository.
 
 ![GitFlow 1](../fig/47-hooks.png)
 

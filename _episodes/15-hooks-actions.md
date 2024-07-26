@@ -49,6 +49,13 @@ print('Hello world!'')
 
 The typo is on purpose. Add and commit it to the repository.
 
+GitHub actions are the equivalent of serverside hooks on GitHub.
+
+There are lots of things that can be done with GitHub actions: https://docs.github.com/en/actions
+
+Here is an example of a simple cron job: https://github.com/mpi-astronomy/XarXiv
+
+
 ![GitFlow 1](../fig/47-hooks.png)
 
 Materials: https://verdantfox.com/blog/how-to-use-git-pre-commit-hooks-the-hard-way-and-the-easy-way

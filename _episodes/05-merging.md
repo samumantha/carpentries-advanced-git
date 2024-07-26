@@ -44,7 +44,7 @@ git merge --no-ff <branch> -m "Message"
 
 The `--no-ff` flag causes the merge to always create a new commit object, even if the merge could be performed with a fast-forward. This avoids losing information about the historical existence of a feature branch and groups together all commits that together added the feature.
 
-## Fast-forward Merger
+## Fast-forward Merge
 
 If there are no conflicts with the main branch, a "fast-forward" merge can be executed with. This will NOT create a merge commit! Aborts merge if it cannot be done.
 Ideal for updating a branch from remote.
@@ -57,9 +57,9 @@ git merge --ff-only <branch>
 
 Using the fast-forward merge it is impossible to see from the `git` history which of the commit objects together have implemented a feature. You would have to manually read all the log messages. Reverting a whole feature (i.e. a group of commits), is a true headache in the latter situation, whereas it is easily done if the --no-ff flag was used.
 
-For a good illustration of fast-forward merger (and other concepts), see this thread: https://stackoverflow.com/questions/9069061/what-effect-does-the-no-ff-flag-have-for-git-merge
+For a good illustration of fast-forward merge (and other concepts), see this thread: https://stackoverflow.com/questions/9069061/what-effect-does-the-no-ff-flag-have-for-git-merge
 
-### Three-way Merger
+### Three-way Merge
 
 Similar to `--no-ff`, but there may be dragons. Forced upon you when there’s an intermediate change since you branched.
 May prompt your to manually resolve
